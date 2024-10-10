@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 
 
@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'First_Angular_App';
+  isMenuScrolled = false;
+
+  @HostListener('window:scroll', ['$event'])
+  scrollCheck() {
+    if (window.scrollY > 100) { // Use scrollY instead of pageYOffset
+      this.isMenuScrolled = true;
+    } else {
+      this.isMenuScrolled = false;
+    }
+
+    console.log(this.isMenuScrolled);
+  }
 }
