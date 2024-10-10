@@ -1,3 +1,16 @@
+<nav class="absolute w-full top-0 left-0 h-screen z-50 flex">
+  <div class="bg-white w-full md:max-w-sm shadow-2xl">
+    <div class="flex justify-end p-5">
+      <svg data-slot="icon" class="h-6 w6" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="bg-gray-900 hidden md:block md:w-full opacity-60">
+    
+  </div>
+</nav>
+
 <header class="absolute w-full ">
   <div class="bg-slate-800 hidden lg:block ">
 
@@ -7,11 +20,9 @@
         All course 25% off for <span class="text-emerald-500">students</span>
        </li>
 
-
        <li>
         <img src="../assets/shapes/shape-1.webp" alt="arrow">
        </li>
-
 
        <li class="flex gap-2">
         <svg data-slot="icon" class="h-6 w-6 text-emerald-500" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -22,7 +33,6 @@
         </a>
        </li>
 
-
        <li class="flex gap-2">
         <svg data-slot="icon"  class="h-6 w-6 text-emerald-500" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path>
@@ -32,11 +42,9 @@
         </a>
        </li>
 
-
        <li>
         <img src="../assets/shapes/shape-2.webp" alt="arrow">
        </li>
-
 
        <li>
           <ul class="flex gap-4">
@@ -70,29 +78,34 @@
     </div>
   </div>
 
-<div class="  {{isMenuScrolled?'fixed top-0 w-full bg-white shadow-xl animate-slideInDown animate-faster ':'pt-10'}}">
+<div class=" px-5 {{isMenuScrolled?'fixed top-0 w-full bg-white shadow-xl animate-slideInDown animate-faster ':'pt-10'}}">
   <div class=" flex items-center container justify-between py-5  {{isMenuScrolled?'':'border'}} border-emerald-500  border-opacity-30  rounded-xl">
     <a href="">
       <img src="../assets/logo.png" alt="">
     </a>
-    <ul class="flex font-semibold text-slate-700 text-lg">
-      <li class="mx-3 px-5 py-3">
+    <div>
+      <svg class="w-7 h-7" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </div>
+    <ul class="hidden lg:flex font-semibold text-slate-700 text-lg gap-8 lg:gap-14">
+      <li class="py-3">
         <a [routerLink]="['']">Home</a>
       </li>
-      <li class="mx-3 px-5 py-3">
+      <li class="py-3">
         <a [routerLink]="['all-course']">All-course</a>
       </li>
-      <li class="mx-3 px-5 py-3">
+      <li class="py-3">
         <a [routerLink]="['pages']">Pages</a>
       </li>
-      <li class="mx-3 px-5 py-3">
+      <li class="my-3">
         <a [routerLink]="['blog']">Blog</a>
       </li>
-      <li class="mx-3 px-5 py-3">
+      <li class="py-3">
         <a [routerLink]="['contact']">Contact</a>
       </li>
     </ul>
-    <ul class="flex gap-6">
+    <ul class="hidden lg:flex gap-6">
       <li>
         <a href="">
           Sign-in
